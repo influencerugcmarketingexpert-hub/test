@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Jacket Studio: handcrafted leather jackets, bombers, trench coats, and shearling outerwear. Timeless style, made to last." />
+  <title>The Jacket Studio | Handcrafted Leather Jackets</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- 1. Announcement bar -->
+  <div class="announcement" role="region" aria-label="Site announcement">
+    <p>Free Worldwide Shipping on Orders Over $200 &nbsp;|&nbsp; 30-Day Easy Returns</p>
+  </div>
+
+  <!-- 2. Header / Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#" class="brand" aria-label="The Jacket Studio home">THE JACKET STUDIO</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Bestsellers</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="icon-group" aria-label="User actions">
+        <button class="icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.35-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.65-9.5 9-9.5 9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Cart (0 items)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1.5 12h-9L6 7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 7a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <nav aria-label="Mobile primary">
+        <ul>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Bestsellers</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 3. Hero -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1800&auto=format&fit=crop&q=70" alt="Model wearing a tailored leather jacket" />
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Autumn / Winter Collection</p>
+        <h1>Crafted Leather,<br/>Timeless Style.</h1>
+        <p class="hero-sub">Small-batch jackets, hand-finished in full-grain leather by artisans who have spent a lifetime at the bench.</p>
+        <div class="hero-ctas">
+          <a href="#bestsellers" class="btn btn-primary">Shop Men</a>
+          <a href="#bestsellers" class="btn btn-ghost">Shop Women</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Categories -->
+    <section class="section categories reveal" aria-labelledby="catsTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Signature Silhouettes</p>
+          <h2 id="catsTitle">Shop by Category</h2>
+        </header>
+
+        <div class="cat-grid">
+          <a href="#" class="cat-card">
+            <div class="cat-image">
+              <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=900&auto=format&fit=crop&q=70" alt="Black leather biker jacket on a model" />
+            </div>
+            <span class="cat-label">Biker Jackets</span>
+          </a>
+          <a href="#" class="cat-card">
+            <div class="cat-image">
+              <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=900&auto=format&fit=crop&q=70" alt="Bomber jacket hanging against a neutral backdrop" />
+            </div>
+            <span class="cat-label">Bomber Jackets</span>
+          </a>
+          <a href="#" class="cat-card">
+            <div class="cat-image">
+              <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=900&auto=format&fit=crop&q=70" alt="Long tan trench coat on a model" />
+            </div>
+            <span class="cat-label">Trench Coats</span>
+          </a>
+          <a href="#" class="cat-card">
+            <div class="cat-image">
+              <img src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=900&auto=format&fit=crop&q=70" alt="Shearling-collar jacket folded on a chair" />
+            </div>
+            <span class="cat-label">Shearling</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Bestsellers -->
+    <section class="section bestsellers reveal" id="bestsellers" aria-labelledby="bestTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Customer Favourites</p>
+          <h2 id="bestTitle">Bestsellers</h2>
+          <p class="section-sub">Jackets our customers come back for, season after season.</p>
+        </header>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?w=700&auto=format&fit=crop&q=70" alt="Classic Moto Jacket in black leather" />
+              <button class="add-btn" type="button">Add to Cart</button>
+            </div>
+            <h3 class="product-name">Classic Moto Jacket</h3>
+            <p class="product-price">$299</p>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=700&auto=format&fit=crop&q=70" alt="Aviator Shearling jacket in brown" />
+              <button class="add-btn" type="button">Add to Cart</button>
+            </div>
+            <h3 class="product-name">Aviator Shearling</h3>
+            <p class="product-price">$459</p>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=700&auto=format&fit=crop&q=70" alt="Urban Bomber jacket in olive" />
+              <button class="add-btn" type="button">Add to Cart</button>
+            </div>
+            <h3 class="product-name">Urban Bomber</h3>
+            <p class="product-price">$249</p>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=700&auto=format&fit=crop&q=70" alt="Heritage Café Racer jacket in espresso brown" />
+              <button class="add-btn" type="button">Add to Cart</button>
+            </div>
+            <h3 class="product-name">Heritage Café Racer</h3>
+            <p class="product-price">$329</p>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1548883354-94bcfe321cbb?w=700&auto=format&fit=crop&q=70" alt="Suede Trucker Jacket in tan" />
+              <button class="add-btn" type="button">Add to Cart</button>
+            </div>
+            <h3 class="product-name">Suede Trucker</h3>
+            <p class="product-price">$279</p>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1591213954196-2d0ccb3f8d4c?w=700&auto=format&fit=crop&q=70" alt="Cognac Racer jacket" />
+              <button class="add-btn" type="button">Add to Cart</button>
+            </div>
+            <h3 class="product-name">Cognac Racer</h3>
+            <p class="product-price">$349</p>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=700&auto=format&fit=crop&q=70" alt="Quilted Field Jacket" />
+              <button class="add-btn" type="button">Add to Cart</button>
+            </div>
+            <h3 class="product-name">Quilted Field Jacket</h3>
+            <p class="product-price">$219</p>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1507680434567-5739c80be1ac?w=700&auto=format&fit=crop&q=70" alt="The Editor Trench coat in camel" />
+              <button class="add-btn" type="button">Add to Cart</button>
+            </div>
+            <h3 class="product-name">The Editor Trench</h3>
+            <p class="product-price">$389</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Promo banner -->
+    <section class="promo reveal" aria-labelledby="promoTitle">
+      <div class="promo-media">
+        <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?w=1200&auto=format&fit=crop&q=70" alt="Artisan stitching a leather panel at a workbench" />
+      </div>
+      <div class="promo-text">
+        <p class="eyebrow">Our Craft</p>
+        <h2 id="promoTitle">Handcrafted Since Day One</h2>
+        <p>
+          Every Jacket Studio piece begins as a full hide, chosen by hand and cut one at a time.
+          It is stitched, finished, and pressed in our family-run atelier &mdash; never on a factory line.
+          The result is a jacket that fits the first day, and fits even better ten years in.
+        </p>
+        <a href="#" class="btn btn-primary">Discover Our Story</a>
+      </div>
+    </section>
+
+    <!-- 7. New Arrivals carousel -->
+    <section class="section arrivals reveal" aria-labelledby="newTitle">
+      <div class="container">
+        <header class="section-head carousel-head">
+          <div>
+            <p class="eyebrow">Fresh Off the Bench</p>
+            <h2 id="newTitle">New Arrivals</h2>
+          </div>
+          <div class="carousel-controls" aria-label="Carousel controls">
+            <button class="carousel-btn" id="prevBtn" aria-label="Previous items">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 6 9 12 15 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="carousel-btn" id="nextBtn" aria-label="Next items">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="carousel" id="carousel">
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=700&auto=format&fit=crop&q=70" alt="Midnight Racer jacket" />
+            </div>
+            <h3 class="product-name">Midnight Racer</h3>
+            <p class="product-price">$359</p>
+          </article>
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1549062572-544a64fb0c56?w=700&auto=format&fit=crop&q=70" alt="Savile Overcoat" />
+            </div>
+            <h3 class="product-name">Savile Overcoat</h3>
+            <p class="product-price">$469</p>
+          </article>
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1520975922284-9ea39113a2d5?w=700&auto=format&fit=crop&q=70" alt="Ember Biker jacket" />
+            </div>
+            <h3 class="product-name">Ember Biker</h3>
+            <p class="product-price">$319</p>
+          </article>
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=700&auto=format&fit=crop&q=70" alt="Harbor Peacoat" />
+            </div>
+            <h3 class="product-name">Harbor Peacoat</h3>
+            <p class="product-price">$299</p>
+          </article>
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1566479179817-c1b8e6f85c0f?w=700&auto=format&fit=crop&q=70" alt="Wanderer Field jacket" />
+            </div>
+            <h3 class="product-name">Wanderer Field</h3>
+            <p class="product-price">$239</p>
+          </article>
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=700&auto=format&fit=crop&q=70" alt="Atelier Blazer" />
+            </div>
+            <h3 class="product-name">Atelier Blazer</h3>
+            <p class="product-price">$279</p>
+          </article>
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=700&auto=format&fit=crop&q=70" alt="Roamer Parka" />
+            </div>
+            <h3 class="product-name">Roamer Parka</h3>
+            <p class="product-price">$399</p>
+          </article>
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1542295669297-4d352b042bca?w=700&auto=format&fit=crop&q=70" alt="Studio Shacket" />
+            </div>
+            <h3 class="product-name">Studio Shacket</h3>
+            <p class="product-price">$189</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Testimonials -->
+    <section class="section testimonials reveal" aria-labelledby="testTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Reviews</p>
+          <h2 id="testTitle">What Our Customers Say</h2>
+        </header>
+
+        <div class="testimonial-grid">
+          <figure class="testimonial">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>
+              "Fit was perfect right out of the box. The leather softened beautifully after a week and I get compliments every time I wear it."
+            </blockquote>
+            <figcaption>&mdash; Ryan M.</figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>
+              "I have bought three jackets now. The quality is unreal for the price, and their size guide is spot on. A forever brand for me."
+            </blockquote>
+            <figcaption>&mdash; Sophia L.</figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>
+              "Customer service walked me through custom sizing. The jacket that arrived fits like it was made for me, because it was."
+            </blockquote>
+            <figcaption>&mdash; David K.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Instagram / Lookbook -->
+    <section class="section lookbook reveal" aria-labelledby="lookTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">@thejacketstudio</p>
+          <h2 id="lookTitle">Follow Us on Instagram</h2>
+        </header>
+        <div class="look-grid">
+          <a href="#" class="look-item"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=70" alt="Street style look with a leather jacket" /></a>
+          <a href="#" class="look-item"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&auto=format&fit=crop&q=70" alt="Editorial portrait in a bomber jacket" /></a>
+          <a href="#" class="look-item"><img src="https://images.unsplash.com/photo-1520975698519-59ed967fb1f5?w=600&auto=format&fit=crop&q=70" alt="Café shot wearing a tan leather jacket" /></a>
+          <a href="#" class="look-item"><img src="https://images.unsplash.com/photo-1542060748-10c28b62716f?w=600&auto=format&fit=crop&q=70" alt="Autumn look with a long coat" /></a>
+          <a href="#" class="look-item"><img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=600&auto=format&fit=crop&q=70" alt="Leather accessory flat lay" /></a>
+          <a href="#" class="look-item"><img src="https://images.unsplash.com/photo-1492447273231-0f8fecec1e3a?w=600&auto=format&fit=crop&q=70" alt="Outdoor portrait in shearling" /></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Newsletter -->
+    <section class="newsletter reveal" aria-labelledby="newsTitle">
+      <div class="container">
+        <p class="eyebrow light">Members Only</p>
+        <h2 id="newsTitle">Join The Studio</h2>
+        <p class="news-sub">Early access to new drops, member pricing, and stories from our atelier. No spam &mdash; ever.</p>
+        <form class="news-form" id="newsForm" novalidate>
+          <label for="newsEmail" class="sr-only">Email address</label>
+          <input type="email" id="newsEmail" name="email" placeholder="Your email address" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="news-status" id="newsStatus" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 11. Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="foot-col">
+        <h3 class="foot-brand">THE JACKET STUDIO</h3>
+        <p>Small-batch leather outerwear, handcrafted by artisans and shipped worldwide.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Bestsellers</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Shipping &amp; Delivery</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Care Guide</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <address>
+          42 Atelier Lane,<br/>
+          Brooklyn, NY 11201<br/>
+          <a href="mailto:hello@thejacketstudio.com">hello@thejacketstudio.com</a><br/>
+          <a href="tel:+11234567890">+1 (123) 456-7890</a>
+        </address>
+        <ul class="social" aria-label="Social media">
+          <li><a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a></li>
+          <li><a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h2V5h-2a3 3 0 0 0-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14V8.5c0-.28.22-.5.5-.5z" fill="currentColor"/></svg>
+          </a></li>
+          <li><a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 5.8c-.7.3-1.5.6-2.3.7a4 4 0 0 0 1.8-2.2 8 8 0 0 1-2.5 1A4 4 0 0 0 12 9a11.3 11.3 0 0 1-8.2-4.2 4 4 0 0 0 1.2 5.3c-.6 0-1.2-.2-1.8-.5v.1a4 4 0 0 0 3.2 3.9c-.6.2-1.2.2-1.8.1a4 4 0 0 0 3.7 2.8A8 8 0 0 1 2 18a11.3 11.3 0 0 0 6.1 1.8c7.3 0 11.3-6 11.3-11.3v-.5c.8-.5 1.5-1.2 2-2z" fill="currentColor"/></svg>
+          </a></li>
+          <li><a href="#" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.3s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.6 2 1.6 2 2 0 3.5-2.1 3.5-5.1 0-2.7-1.9-4.5-4.7-4.5-3.2 0-5 2.4-5 4.8 0 1 .4 2 .8 2.6a.3.3 0 0 1 .1.3l-.3 1.1c0 .2-.2.2-.4.1-1.3-.6-2.1-2.5-2.1-4 0-3.2 2.4-6.2 6.8-6.2 3.6 0 6.3 2.6 6.3 6 0 3.5-2.2 6.4-5.3 6.4-1 0-2-.5-2.3-1.2l-.6 2.4c-.2.9-.9 2-1.3 2.7A10 10 0 1 0 12 2z" fill="currentColor"/></svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div class="container foot-bottom-inner">
+        <p>&copy; 2025 The Jacket Studio. All rights reserved.</p>
+        <ul class="pay-methods" aria-label="Accepted payment methods">
+          <li>VISA</li>
+          <li>MASTERCARD</li>
+          <li>AMEX</li>
+          <li>PAYPAL</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
