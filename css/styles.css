@@ -380,57 +380,8 @@ input:focus-visible {
 }
 
 /* =========================================================
-   Categories
+   Bestsellers / Product cards
    ========================================================= */
-.cat-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-.cat-card {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  aspect-ratio: 3 / 4;
-  background: var(--bg-alt);
-}
-.cat-image {
-  position: absolute;
-  inset: 0;
-}
-.cat-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-.cat-card:hover .cat-image img { transform: scale(1.06); }
-.cat-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 100%);
-  pointer-events: none;
-}
-.cat-label {
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  z-index: 2;
-  color: #fff;
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
-  letter-spacing: 0.02em;
-}
-
-/* =========================================================
-   Bestsellers / Product grid
-   ========================================================= */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px 24px;
-}
 .product-card {
   text-align: left;
 }
@@ -462,16 +413,25 @@ input:focus-visible {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
-  opacity: 0;
+  visibility: hidden;
   transform: translateY(8px);
-  transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
+  transition: visibility 0s linear 0.25s, transform 0.25s ease, background 0.2s ease;
 }
 .product-card:hover .add-btn,
 .product-card:focus-within .add-btn {
-  opacity: 1;
+  visibility: visible;
   transform: translateY(0);
+  transition: visibility 0s linear 0s, transform 0.25s ease, background 0.2s ease;
 }
 .add-btn:hover { background: var(--accent); }
+
+@media (hover: none) {
+  .add-btn {
+    visibility: visible;
+    transform: none;
+    transition: background 0.2s ease;
+  }
+}
 
 .product-name {
   font-family: var(--font-sans);
@@ -486,39 +446,6 @@ input:focus-visible {
   color: var(--ink-soft);
   margin: 0;
 }
-
-/* =========================================================
-   Promo banner (split)
-   ========================================================= */
-.promo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 520px;
-  background: var(--bg-alt);
-}
-.promo-media { overflow: hidden; }
-.promo-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.promo-text {
-  padding: clamp(40px, 6vw, 96px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 640px;
-}
-.promo-text h2 {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  margin-bottom: 20px;
-}
-.promo-text p {
-  color: var(--ink-soft);
-  margin: 0 0 32px;
-  font-size: 1rem;
-}
-.promo-text .btn { align-self: flex-start; }
 
 /* =========================================================
    Carousel / New Arrivals
@@ -570,118 +497,6 @@ input:focus-visible {
 .carousel::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 3px; }
 .carousel-item {
   scroll-snap-align: start;
-}
-
-/* =========================================================
-   Testimonials
-   ========================================================= */
-.testimonials { background: var(--bg-alt); }
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-.testimonial {
-  background: var(--white);
-  padding: 36px 32px;
-  margin: 0;
-  border: 1px solid var(--rule);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.testimonial .stars {
-  color: var(--accent);
-  letter-spacing: 0.08em;
-  font-size: 16px;
-}
-.testimonial blockquote {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  line-height: 1.55;
-  margin: 0;
-  color: var(--ink);
-  font-style: italic;
-}
-.testimonial figcaption {
-  font-size: 13px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  font-weight: 500;
-}
-
-/* =========================================================
-   Lookbook
-   ========================================================= */
-.look-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 12px;
-}
-.look-item {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
-}
-.look-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease, filter 0.3s ease;
-}
-.look-item:hover img {
-  transform: scale(1.06);
-  filter: brightness(0.92);
-}
-
-/* =========================================================
-   Newsletter
-   ========================================================= */
-.newsletter {
-  background: var(--dark);
-  color: #eae4d7;
-  padding: 96px 0;
-  text-align: center;
-}
-.newsletter h2 {
-  color: #fff;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-}
-.news-sub {
-  max-width: 520px;
-  margin: 0 auto 32px;
-  color: rgba(255, 255, 255, 0.75);
-}
-.news-form {
-  display: flex;
-  gap: 10px;
-  max-width: 520px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.news-form input {
-  flex: 1 1 260px;
-  min-width: 0;
-  padding: 14px 18px;
-  font-size: 14px;
-  background: transparent;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: var(--radius);
-  font-family: inherit;
-}
-.news-form input::placeholder { color: rgba(255, 255, 255, 0.55); }
-.news-form input:focus {
-  outline: none;
-  border-color: var(--accent-soft);
-}
-.news-status {
-  margin-top: 18px;
-  min-height: 1.2em;
-  font-size: 14px;
-  color: var(--accent-soft);
 }
 
 /* =========================================================
@@ -804,7 +619,7 @@ input:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
-  .cat-image img, .product-media img, .look-item img { transition: none; }
+  .product-media img { transition: none; }
 }
 
 /* =========================================================
@@ -1018,9 +833,30 @@ input:focus-visible {
 }
 .promo-banner.flat25 {
   background-image: url("https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=1600&auto=format&fit=crop&q=70");
+  background-position: right center;
+  justify-content: flex-start;
 }
 .promo-banner.flat25::before {
   background: rgba(0, 0, 0, 0.35);
+}
+.promo-banner.flat25 .container.flat25-inner {
+  text-align: left;
+  max-width: var(--container);
+  width: 100%;
+  padding: 0 24px;
+}
+.flat25-copy {
+  max-width: 460px;
+}
+.flat25-copy h2 { text-align: left; }
+.flat25-copy p { text-align: left; }
+
+@media (max-width: 768px) {
+  .promo-banner.flat25 { background-position: center; }
+  .promo-banner.flat25 .container.flat25-inner { text-align: center; }
+  .flat25-copy { max-width: 100%; margin: 0 auto; }
+  .flat25-copy h2,
+  .flat25-copy p { text-align: center; }
 }
 
 /* =========================================================
@@ -1142,11 +978,7 @@ input:focus-visible {
 @media (max-width: 1024px) {
   .primary-nav ul { gap: 18px; }
   .primary-nav a { font-size: 12px; }
-  .cat-grid { grid-template-columns: repeat(2, 1fr); }
-  .product-grid { grid-template-columns: repeat(2, 1fr); }
   .carousel { grid-auto-columns: calc((100% - 2 * 24px) / 3); }
-  .look-grid { grid-template-columns: repeat(3, 1fr); }
-  .testimonial-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .press-logos { gap: 32px; }
 }
@@ -1166,10 +998,7 @@ input:focus-visible {
   .icon-group .icon-btn:not(.cart-btn) { display: none; }
   .icon-group { justify-self: end; }
 
-  .promo { grid-template-columns: 1fr; }
-  .promo-media { aspect-ratio: 4 / 3; }
   .carousel { grid-auto-columns: calc((100% - 24px) / 2); }
-  .look-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
   .carousel-head { flex-direction: column; align-items: flex-start; }
 
   .hero { min-height: 75vh; }
@@ -1188,8 +1017,6 @@ input:focus-visible {
 }
 
 @media (max-width: 480px) {
-  .product-grid { grid-template-columns: 1fr; gap: 28px; }
-  .cat-grid { grid-template-columns: 1fr; }
   .carousel { grid-auto-columns: 78%; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .hero h1 { font-size: 2.2rem; }

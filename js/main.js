@@ -156,14 +156,14 @@
     var slides = wrap.querySelectorAll(".announcement-slide");
     if (!slides.length) return;
 
-    // Normalize state: first slide active, others hidden.
+    // Normalize state: first slide active, all slides unhidden
+    // (CSS .announcement-slide { display: none } + .is-active drives visibility once JS is running).
     slides.forEach(function (el, i) {
+      el.removeAttribute("hidden");
       if (i === 0) {
         el.classList.add("is-active");
-        el.removeAttribute("hidden");
       } else {
         el.classList.remove("is-active");
-        el.setAttribute("hidden", "");
       }
     });
 
@@ -172,13 +172,30 @@
     var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion) return;
 
+    var region = document.getElementById("announcement") || wrap;
     var index = 0;
-    setInterval(function () {
+    var timer = null;
+
+    var advance = function () {
       slides[index].classList.remove("is-active");
-      slides[index].setAttribute("hidden", "");
       index = (index + 1) % slides.length;
       slides[index].classList.add("is-active");
-      slides[index].removeAttribute("hidden");
-    }, 4000);
+    };
+    var start = function () {
+      if (timer) return;
+      timer = setInterval(advance, 4000);
+    };
+    var stop = function () {
+      if (!timer) return;
+      clearInterval(timer);
+      timer = null;
+    };
+
+    region.addEventListener("mouseenter", stop);
+    region.addEventListener("mouseleave", start);
+    region.addEventListener("focusin", stop);
+    region.addEventListener("focusout", start);
+
+    start();
   }
 })();

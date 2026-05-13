@@ -13,16 +13,16 @@ python3 -m http.server 8000
 
 ## Sections
 
-1. **Announcement bar** - three rotating messages (free shipping, easy returns, custom fit)
+1. **Announcement bar** - three rotating messages (free shipping, easy returns, custom fit); pauses on hover / focus and for reduced-motion users
 2. **Header / Navigation** - sticky header, text logo, primary nav (Men, Women, Bags, Shoes, Custom, Sale), search / account / wishlist / cart icons, mobile hamburger drawer
-3. **Hero** - full-bleed image with mobile variant, headline "Create Your Custom Leather Jackets", Shop Men / Shop Women CTAs
+3. **Hero** - full-bleed image with mobile variant, headline "Create Your Custom Leather Jacket", Shop Men / Shop Women CTAs
 4. **Value pillars** - "FINEST QUALITY. FAIR PRICING." with three pillars: Made for you, Made to fit, Made to last
 5. **Category spotlights** - two side-by-side tiles for TruCarry leather bags and Eviternity leather shoes
-6. **As Featured In** - six press-logo placeholders and a 4.9/5 rating line from 12,000+ customers
-7. **Clearance promo** - full-bleed banner with "Up To 50% Off" and a Shop Clearance CTA
-8. **Shop Best Sellers** - horizontal snap-scroll carousel with 12 product cards and prev / next controls. Three cards carry a Sale badge and a was-price
+6. **Shop Best Sellers** - horizontal snap-scroll carousel with 12 product cards and prev / next controls. Three cards carry a Sale badge and a was-price
+7. **As Featured In** - six fictional press-logo placeholders and a 4.9/5 rating line from 12,000+ customers
+8. **Clearance promo** - full-bleed banner with "Up To 50% Off" and a Shop Clearance CTA
 9. **Star Spotlight** - four portrait cards with name + occupation captions
-10. **Secondary promo** - full-bleed "Flat 25% Off Leather Bags" banner with CTA
+10. **Secondary promo** - split-layout "Flat 25% Off Leather Bags" banner with a ghost CTA and lighter overlay (visually distinct from the clearance banner)
 11. **Footer** - four columns (brand + inline newsletter, Customer Care, About, Shop), social icon row, copyright, and payment method labels
 
 ## File structure
@@ -39,7 +39,7 @@ python3 -m http.server 8000
 
 ## JavaScript behaviors
 
-- **Announcement bar**: rotates three messages every 4 seconds. Pauses for users who set `prefers-reduced-motion: reduce`
+- **Announcement bar**: rotates three messages every 4 seconds. Pauses when the bar is hovered or receives focus, and stays static for users who set `prefers-reduced-motion: reduce`
 - **Sticky header**: adds a shadow once the page is scrolled
 - **Mobile drawer**: hamburger toggle with Escape key, resize, and link-tap closing
 - **Newsletter form**: email validation, prevents default, shows an inline thank-you message in the footer
