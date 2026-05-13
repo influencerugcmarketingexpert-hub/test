@@ -13,11 +13,11 @@ python3 -m http.server 8000
 
 ## Sections
 
-1. **Announcement bar** - three rotating messages (free shipping, easy returns, custom fit); pauses on hover / focus and for reduced-motion users
+1. **Announcement bar** - three rotating messages (free shipping, easy returns, custom fit); pauses when the bar is hovered, and stays static for users who set `prefers-reduced-motion: reduce`
 2. **Header / Navigation** - sticky header, text logo, primary nav (Men, Women, Bags, Shoes, Custom, Sale), search / account / wishlist / cart icons, mobile hamburger drawer
 3. **Hero** - full-bleed image with mobile variant, headline "Create Your Custom Leather Jacket", Shop Men / Shop Women CTAs
 4. **Value pillars** - "FINEST QUALITY. FAIR PRICING." with three pillars: Made for you, Made to fit, Made to last
-5. **Category spotlights** - two side-by-side tiles for TruCarry leather bags and Eviternity leather shoes
+5. **Category spotlights** - three side-by-side tiles for The Studio Line leather jackets, TruCarry leather bags, and Eviternity leather shoes
 6. **Shop Best Sellers** - horizontal snap-scroll carousel with 12 product cards and prev / next controls. Three cards carry a Sale badge and a was-price
 7. **As Featured In** - six fictional press-logo placeholders and a 4.9/5 rating line from 12,000+ customers
 8. **Clearance promo** - full-bleed banner with "Up To 50% Off" and a Shop Clearance CTA
@@ -39,7 +39,7 @@ python3 -m http.server 8000
 
 ## JavaScript behaviors
 
-- **Announcement bar**: rotates three messages every 4 seconds. Pauses when the bar is hovered or receives focus, and stays static for users who set `prefers-reduced-motion: reduce`
+- **Announcement bar**: rotates three messages every 4 seconds. Pauses when the bar is hovered, and stays static for users who set `prefers-reduced-motion: reduce`
 - **Sticky header**: adds a shadow once the page is scrolled
 - **Mobile drawer**: hamburger toggle with Escape key, resize, and link-tap closing
 - **Newsletter form**: email validation, prevents default, shows an inline thank-you message in the footer

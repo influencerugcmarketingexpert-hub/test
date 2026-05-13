@@ -413,23 +413,21 @@ input:focus-visible {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
-  visibility: hidden;
-  transform: translateY(8px);
-  transition: visibility 0s linear 0.25s, transform 0.25s ease, background 0.2s ease;
-}
-.product-card:hover .add-btn,
-.product-card:focus-within .add-btn {
-  visibility: visible;
-  transform: translateY(0);
-  transition: visibility 0s linear 0s, transform 0.25s ease, background 0.2s ease;
+  transition: background 0.2s ease;
 }
 .add-btn:hover { background: var(--accent); }
 
-@media (hover: none) {
+@media (hover: hover) and (pointer: fine) {
   .add-btn {
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: visibility 0s linear 0.25s, transform 0.25s ease, background 0.2s ease;
+  }
+  .product-card:hover .add-btn,
+  .product-card:focus-within .add-btn {
     visibility: visible;
-    transform: none;
-    transition: background 0.2s ease;
+    transform: translateY(0);
+    transition: visibility 0s linear 0s, transform 0.25s ease, background 0.2s ease;
   }
 }
 
@@ -676,7 +674,7 @@ input:focus-visible {
    ========================================================= */
 .spotlight-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   min-height: 440px;
 }
@@ -837,7 +835,7 @@ input:focus-visible {
   justify-content: flex-start;
 }
 .promo-banner.flat25::before {
-  background: rgba(0, 0, 0, 0.35);
+  background: linear-gradient(90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
 }
 .promo-banner.flat25 .container.flat25-inner {
   text-align: left;
@@ -853,6 +851,7 @@ input:focus-visible {
 
 @media (max-width: 768px) {
   .promo-banner.flat25 { background-position: center; }
+  .promo-banner.flat25::before { background: rgba(0, 0, 0, 0.45); }
   .promo-banner.flat25 .container.flat25-inner { text-align: center; }
   .flat25-copy { max-width: 100%; margin: 0 auto; }
   .flat25-copy h2,
@@ -981,6 +980,7 @@ input:focus-visible {
   .carousel { grid-auto-columns: calc((100% - 2 * 24px) / 3); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .press-logos { gap: 32px; }
+  .spotlight-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {

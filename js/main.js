@@ -193,8 +193,6 @@
 
     region.addEventListener("mouseenter", stop);
     region.addEventListener("mouseleave", start);
-    region.addEventListener("focusin", stop);
-    region.addEventListener("focusout", start);
 
     start();
   }
