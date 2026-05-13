@@ -11,6 +11,7 @@
     initNewsletter();
     initCarousel();
     initReveal();
+    initAnnouncement();
   });
 
   /* ---------------------------------------------------------
@@ -144,5 +145,40 @@
     }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 
     items.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------------------------------------------------------
+     Announcement bar rotation
+     --------------------------------------------------------- */
+  function initAnnouncement() {
+    var wrap = document.getElementById("announcementMsg");
+    if (!wrap) return;
+    var slides = wrap.querySelectorAll(".announcement-slide");
+    if (!slides.length) return;
+
+    // Normalize state: first slide active, others hidden.
+    slides.forEach(function (el, i) {
+      if (i === 0) {
+        el.classList.add("is-active");
+        el.removeAttribute("hidden");
+      } else {
+        el.classList.remove("is-active");
+        el.setAttribute("hidden", "");
+      }
+    });
+
+    if (slides.length < 2) return;
+
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return;
+
+    var index = 0;
+    setInterval(function () {
+      slides[index].classList.remove("is-active");
+      slides[index].setAttribute("hidden", "");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("is-active");
+      slides[index].removeAttribute("hidden");
+    }, 4000);
   }
 })();
