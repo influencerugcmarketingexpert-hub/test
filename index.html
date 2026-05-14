@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Jacket Studio: custom leather jackets, bags, and shoes. Full-grain leather, hand finished, made to your measurements." />
-  <title>The Jacket Studio | Custom Leather Jackets</title>
+  <meta name="description" content="THEJACKERMAKER - Handcrafted leather jackets made to last a lifetime. Custom made-to-measure, top-grain leather, free worldwide shipping." />
+  <title>THEJACKERMAKER | Handcrafted Leather Jackets</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,32 +14,43 @@
 </head>
 <body>
 
-  <!-- 1. Announcement bar -->
+  <!-- ============================================================
+       (1) ANNOUNCEMENT BAR
+       ============================================================ -->
   <div class="announcement" id="announcement" role="region" aria-label="Site announcement">
-    <p class="announcement-msg" id="announcementMsg">
-      <span class="announcement-slide is-active">FREE SHIPPING WORLDWIDE ON ALL ORDERS</span>
-      <span class="announcement-slide" hidden>30-DAY EASY RETURNS</span>
-      <span class="announcement-slide" hidden>CUSTOM FIT ON EVERY JACKET</span>
-    </p>
+    <div class="announcement-inner">
+      <p class="announcement-msg" id="announcementMsg">
+        <span class="announcement-slide is-active">FREE WORLDWIDE SHIPPING ON ORDERS $199+</span>
+        <span class="announcement-slide" hidden>USE CODE <strong>JACKER10</strong> FOR 10% OFF YOUR FIRST ORDER</span>
+        <span class="announcement-slide" hidden>LIFETIME REPAIRS ON EVERY JACKET</span>
+      </p>
+      <div class="announcement-meta">
+        <span>USD &#9662;</span>
+        <span>EN &#9662;</span>
+      </div>
+    </div>
   </div>
 
-  <!-- 2. Header / Navigation -->
+  <!-- ============================================================
+       (2) STICKY HEADER NAVIGATION
+       ============================================================ -->
   <header class="site-header" id="siteHeader">
     <div class="nav-inner">
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
 
-      <a href="#" class="brand" aria-label="The Jacket Studio home">THE JACKET STUDIO</a>
+      <a href="#" class="brand" aria-label="THEJACKERMAKER home">THEJACKERMAKER</a>
 
       <nav class="primary-nav" aria-label="Primary">
         <ul>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">Bags</a></li>
-          <li><a href="#">Shoes</a></li>
-          <li><a href="#">Custom</a></li>
-          <li><a href="#">Sale</a></li>
+          <li><a href="#categories">Men</a></li>
+          <li><a href="#categories">Women</a></li>
+          <li><a href="#custom">Custom</a></li>
+          <li><a href="#collection">Collections</a></li>
+          <li class="nav-sale"><a href="#categories">Sale</a></li>
+          <li><a href="#story">Story</a></li>
+          <li><a href="#journal">Journal</a></li>
         </ul>
       </nav>
 
@@ -47,11 +58,11 @@
         <button class="icon-btn" aria-label="Search">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </button>
-        <button class="icon-btn" aria-label="Account">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-        </button>
         <button class="icon-btn" aria-label="Wishlist">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.35-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.65-9.5 9-9.5 9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
         </button>
         <button class="icon-btn cart-btn" aria-label="Cart (0 items)">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1.5 12h-9L6 7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 7a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
@@ -64,12 +75,13 @@
     <div class="mobile-nav" id="mobileNav" aria-hidden="true">
       <nav aria-label="Mobile primary">
         <ul>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">Bags</a></li>
-          <li><a href="#">Shoes</a></li>
-          <li><a href="#">Custom</a></li>
-          <li><a href="#">Sale</a></li>
+          <li><a href="#categories">Men</a></li>
+          <li><a href="#categories">Women</a></li>
+          <li><a href="#custom">Custom</a></li>
+          <li><a href="#collection">Collections</a></li>
+          <li><a href="#categories">Sale</a></li>
+          <li><a href="#story">Story</a></li>
+          <li><a href="#journal">Journal</a></li>
         </ul>
       </nav>
     </div>
@@ -77,7 +89,9 @@
 
   <main>
 
-    <!-- 3. Hero -->
+    <!-- ============================================================
+         (3) HERO
+         ============================================================ -->
     <section class="hero" aria-label="Hero">
       <div class="hero-media">
         <picture>
@@ -87,23 +101,286 @@
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-content reveal">
-        <p class="eyebrow">Autumn / Winter Drop</p>
-        <h1>Create Your Custom<br/>Leather Jacket</h1>
-        <p class="hero-sub">Cut, stitched, and finished by hand in full-grain leather. Pick your style. We make it to your measurements.</p>
-        <!-- TODO: point Shop Men and Shop Women at dedicated collection pages when they exist -->
+        <p class="eyebrow">Autumn / Winter 2026</p>
+        <h1>Handcrafted Leather Jackets<br/>Made To Last A Lifetime</h1>
+        <p class="hero-sub">Hand-cut from top-grain hides by master artisans. Custom-fitted to you. Built to age beautifully.</p>
         <div class="hero-ctas">
-          <a href="#bestsellers" class="btn btn-primary">Shop Men</a>
-          <a href="#bestsellers" class="btn btn-ghost">Shop Women</a>
+          <a href="#categories" class="btn btn-primary">Shop Men &rarr;</a>
+          <a href="#categories" class="btn btn-ghost">Shop Women &rarr;</a>
+        </div>
+      </div>
+      <a href="#trust" class="hero-scroll" aria-label="Scroll to next section">&#9662;</a>
+    </section>
+
+    <!-- ============================================================
+         (4) TRUST STRIP / USPs
+         ============================================================ -->
+    <section class="trust-strip" id="trust" aria-label="Why shop with us">
+      <div class="container trust-grid">
+        <div class="trust-item"><span class="trust-icon">&#10003;</span> Free Worldwide Shipping <small>on orders $199+</small></div>
+        <div class="trust-item"><span class="trust-icon">&#10003;</span> Free 30-Day Returns <small>no questions asked</small></div>
+        <div class="trust-item"><span class="trust-icon">&#10003;</span> 100% Genuine Leather <small>top-grain hides</small></div>
+        <div class="trust-item"><span class="trust-icon">&#10003;</span> Made-To-Measure <small>custom sizing free</small></div>
+        <div class="trust-item"><span class="trust-icon">&#10003;</span> Klarna Available <small>pay in 3 instalments</small></div>
+        <div class="trust-item"><span class="trust-icon">&#10003;</span> Lifetime Repair <small>we&#39;ve got you covered</small></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         (5) SHOP BY CATEGORY (6 tiles)
+         ============================================================ -->
+    <section class="section categories reveal" id="categories" aria-labelledby="catTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Find Your Style</p>
+          <h2 id="catTitle">Shop By Category</h2>
+        </header>
+
+        <div class="cat-grid">
+          <a href="#" class="cat-tile">
+            <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?w=800&auto=format&fit=crop&q=70" alt="Black biker leather jacket" />
+            <span class="cat-label">Biker</span>
+          </a>
+          <a href="#" class="cat-tile">
+            <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=800&auto=format&fit=crop&q=70" alt="Olive bomber jacket" />
+            <span class="cat-label">Bomber</span>
+          </a>
+          <a href="#" class="cat-tile">
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=800&auto=format&fit=crop&q=70" alt="Brown shearling jacket" />
+            <span class="cat-label">Shearling</span>
+          </a>
+          <a href="#" class="cat-tile">
+            <img src="https://images.unsplash.com/photo-1507680434567-5739c80be1ac?w=800&auto=format&fit=crop&q=70" alt="Camel leather blazer" />
+            <span class="cat-label">Blazer</span>
+          </a>
+          <a href="#" class="cat-tile">
+            <img src="https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=800&auto=format&fit=crop&q=70" alt="Aviator leather jacket" />
+            <span class="cat-label">Aviator</span>
+          </a>
+          <a href="#" class="cat-tile cat-tile-sale">
+            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=800&auto=format&fit=crop&q=70" alt="Sale leather jackets" />
+            <span class="cat-label">Sale <small>up to 40% off</small></span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- 4. Value pillars -->
-    <section class="section pillars reveal" aria-labelledby="pillarsTitle">
+    <!-- ============================================================
+         (6) NEW ARRIVALS CAROUSEL
+         ============================================================ -->
+    <section class="section new-arrivals reveal" aria-labelledby="newTitle">
+      <div class="container">
+        <header class="section-head carousel-head">
+          <div>
+            <p class="eyebrow">Just Dropped</p>
+            <h2 id="newTitle">New Arrivals</h2>
+          </div>
+          <div class="carousel-actions">
+            <a href="#" class="link-arrow">Shop All &rarr;</a>
+            <div class="carousel-controls" aria-label="Carousel controls">
+              <button class="carousel-btn" id="prevBtn" aria-label="Previous items">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 6 9 12 15 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button class="carousel-btn" id="nextBtn" aria-label="Next items">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div class="carousel" id="carousel">
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <span class="product-badge">New</span>
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?w=700&auto=format&fit=crop&q=70" alt="Classic Moto jacket in black leather" />
+              <button class="add-btn" type="button">Quick View</button>
+            </div>
+            <h3 class="product-name">Classic Moto</h3>
+            <div class="swatches"><span style="background:#1a1a1a"></span><span style="background:#5a3a22"></span><span style="background:#7a5230"></span></div>
+            <p class="product-price"><span class="price-current">$349</span></p>
+          </article>
+
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <span class="product-badge">New</span>
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=700&auto=format&fit=crop&q=70" alt="Aviator Shearling jacket" />
+              <button class="add-btn" type="button">Quick View</button>
+            </div>
+            <h3 class="product-name">Aviator Shearling</h3>
+            <div class="swatches"><span style="background:#5a3a22"></span><span style="background:#2a1a10"></span></div>
+            <p class="product-price"><span class="price-current">$459</span></p>
+          </article>
+
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=700&auto=format&fit=crop&q=70" alt="Urban Bomber jacket" />
+              <button class="add-btn" type="button">Quick View</button>
+            </div>
+            <h3 class="product-name">Urban Bomber</h3>
+            <div class="swatches"><span style="background:#3a4a32"></span><span style="background:#1a1a1a"></span></div>
+            <p class="product-price"><span class="price-current">$299</span></p>
+          </article>
+
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=700&auto=format&fit=crop&q=70" alt="Heritage Cafe Racer jacket" />
+              <button class="add-btn" type="button">Quick View</button>
+            </div>
+            <h3 class="product-name">Heritage Cafe Racer</h3>
+            <div class="swatches"><span style="background:#5a3a22"></span><span style="background:#1a1a1a"></span></div>
+            <p class="product-price"><span class="price-current">$329</span></p>
+          </article>
+
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <span class="product-badge">New</span>
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1548883354-94bcfe321cbb?w=700&auto=format&fit=crop&q=70" alt="Suede Trucker jacket" />
+              <button class="add-btn" type="button">Quick View</button>
+            </div>
+            <h3 class="product-name">Suede Trucker</h3>
+            <div class="swatches"><span style="background:#9a6a40"></span><span style="background:#2a1a10"></span></div>
+            <p class="product-price"><span class="price-current">$279</span></p>
+          </article>
+
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1591213954196-2d0ccb3f8d4c?w=700&auto=format&fit=crop&q=70" alt="Cognac Racer jacket" />
+              <button class="add-btn" type="button">Quick View</button>
+            </div>
+            <h3 class="product-name">Cognac Racer</h3>
+            <div class="swatches"><span style="background:#8b5a2b"></span></div>
+            <p class="product-price"><span class="price-current">$399</span></p>
+          </article>
+
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <span class="product-badge sale">Sale</span>
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=700&auto=format&fit=crop&q=70" alt="Quilted Field jacket" />
+              <button class="add-btn" type="button">Quick View</button>
+            </div>
+            <h3 class="product-name">Quilted Field</h3>
+            <div class="swatches"><span style="background:#3a3328"></span><span style="background:#1a1a1a"></span></div>
+            <p class="product-price"><span class="price-current">$219</span><span class="price-was">$269</span></p>
+          </article>
+
+          <article class="product-card carousel-item">
+            <div class="product-media">
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=700&auto=format&fit=crop&q=70" alt="Midnight Racer jacket" />
+              <button class="add-btn" type="button">Quick View</button>
+            </div>
+            <h3 class="product-name">Midnight Racer</h3>
+            <div class="swatches"><span style="background:#1a1a1a"></span></div>
+            <p class="product-price"><span class="price-current">$359</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         (7) EDITORIAL SPLIT (Men / Women)
+         ============================================================ -->
+    <section class="section editorial-split reveal" aria-label="Shop by gender">
+      <div class="split-grid">
+        <a href="#" class="split-card">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&auto=format&fit=crop&q=70" alt="Man in leather jacket" />
+          <div class="split-content">
+            <p class="eyebrow light">For Him</p>
+            <h2>Men&#39;s Edit</h2>
+            <p>Leather, refined.</p>
+            <span class="btn btn-ghost-dark">Shop Men&#39;s &rarr;</span>
+          </div>
+        </a>
+        <a href="#" class="split-card">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1200&auto=format&fit=crop&q=70" alt="Woman in leather jacket" />
+          <div class="split-content">
+            <p class="eyebrow light">For Her</p>
+            <h2>Women&#39;s Edit</h2>
+            <p>Bold. Modern. Yours.</p>
+            <span class="btn btn-ghost-dark">Shop Women&#39;s &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         (8) BEST SELLERS GRID (4 cards)
+         ============================================================ -->
+    <section class="section bestsellers reveal" aria-labelledby="bestTitle">
       <div class="container">
         <header class="section-head">
-          <h2 id="pillarsTitle">FINEST QUALITY. FAIR PRICING.</h2>
-          <p class="section-sub">Small-batch leather, priced like it should be - not like it's in a glass case.</p>
+          <p class="eyebrow">Customer Favourites</p>
+          <h2 id="bestTitle">Best Sellers</h2>
+          <p class="section-sub">Loved by 12,000+ customers &bull; <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 / 5</p>
+        </header>
+
+        <div class="best-grid">
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge rank">#1</span>
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1520975922284-9ea39113a2d5?w=700&auto=format&fit=crop&q=70" alt="Ember Biker jacket" />
+              <button class="add-btn" type="button">Add to Cart</button>
+            </div>
+            <h3 class="product-name">Ember Biker</h3>
+            <p class="product-rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 (312)</p>
+            <p class="product-price"><span class="price-current">$399</span></p>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge rank">#2</span>
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=700&auto=format&fit=crop&q=70" alt="Harbor Peacoat" />
+              <button class="add-btn" type="button">Add to Cart</button>
+            </div>
+            <h3 class="product-name">Harbor Peacoat</h3>
+            <p class="product-rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 (264)</p>
+            <p class="product-price"><span class="price-current">$349</span></p>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge rank">#3</span>
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1549062572-544a64fb0c56?w=700&auto=format&fit=crop&q=70" alt="Savile Overcoat" />
+              <button class="add-btn" type="button">Add to Cart</button>
+            </div>
+            <h3 class="product-name">Savile Overcoat</h3>
+            <p class="product-rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 (198)</p>
+            <p class="product-price"><span class="price-current">$429</span></p>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge rank">#4</span>
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1507680434567-5739c80be1ac?w=700&auto=format&fit=crop&q=70" alt="Editor Trench coat" />
+              <button class="add-btn" type="button">Add to Cart</button>
+            </div>
+            <h3 class="product-name">The Editor Trench</h3>
+            <p class="product-rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7 (174)</p>
+            <p class="product-price"><span class="price-current">$379</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         (9) BRAND STORY / WHY US
+         ============================================================ -->
+    <section class="section why-us reveal" id="story" aria-labelledby="whyTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Our Craft</p>
+          <h2 id="whyTitle">Why THEJACKERMAKER Is Different</h2>
         </header>
 
         <div class="pillars-grid">
@@ -111,345 +388,353 @@
             <div class="pillar-icon" aria-hidden="true">
               <svg viewBox="0 0 40 40" width="40" height="40"><circle cx="11" cy="29" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="29" cy="29" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="14" y1="27" x2="28" y2="11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="26" y1="27" x2="12" y2="11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </div>
-            <h3>Made for you</h3>
-            <p>Hand-picked hides, cut to your silhouette, never off a production line.</p>
+            <h3>Hand-Cut Atelier</h3>
+            <p>Every panel is hand-cut by master artisans in our atelier &mdash; never on a production line.</p>
           </div>
           <div class="pillar">
             <div class="pillar-icon" aria-hidden="true">
               <svg viewBox="0 0 40 40" width="40" height="40"><path d="M6 18c4-6 24-6 28 0-4 6-24 6-28 0z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><line x1="12" y1="18" x2="12" y2="22" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="18" y1="18" x2="18" y2="23" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="24" y1="18" x2="24" y2="22" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="30" y1="18" x2="30" y2="23" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </div>
-            <h3>Made to fit</h3>
-            <p>Free custom sizing on every jacket. Send your measurements or our size guide walks you through it.</p>
+            <h3>Top-Grain Hides</h3>
+            <p>Only the finest top-grain leather, ethically sourced and aged to develop a beautiful patina.</p>
           </div>
           <div class="pillar">
             <div class="pillar-icon" aria-hidden="true">
               <svg viewBox="0 0 40 40" width="40" height="40"><path d="M20 6l12 4v10c0 7-5 12-12 14-7-2-12-7-12-14V10l12-4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><polyline points="15 20 19 24 26 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <h3>Made to last</h3>
-            <p>Full-grain leather that softens with wear. Built to outlast fast fashion by decades.</p>
+            <h3>Lifetime Craft</h3>
+            <p>We repair every jacket we make, for life. Built to outlast trends and last for decades.</p>
+          </div>
+        </div>
+
+        <p class="why-blurb">Each jacket is hand-cut by master artisans in our atelier using only top-grain leather &mdash; built to age beautifully.</p>
+
+        <div class="why-cta">
+          <a href="#" class="btn btn-primary">Discover Our Craft &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         (10) FEATURED COLLECTION (Winter Edit)
+         ============================================================ -->
+    <section class="featured-collection reveal" id="collection" aria-labelledby="winterTitle">
+      <div class="winter-banner">
+        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=1800&auto=format&fit=crop&q=70" alt="Winter Edit 2026 banner" />
+        <div class="winter-overlay">
+          <div class="container winter-content">
+            <p class="eyebrow light">2026</p>
+            <h2 id="winterTitle">The Winter Edit</h2>
+            <p>Premium shearling and heavy-weight leather, made for the cold season.</p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- 5. Category spotlights -->
-    <section class="section spotlights reveal" aria-label="Category spotlights">
       <div class="container">
-        <div class="spotlight-grid">
-          <a href="#" class="spotlight-card">
-            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200&auto=format&fit=crop&q=70" alt="Model wearing a handcrafted leather jacket" />
-            <div class="spot-content">
-              <p class="eyebrow light">The Studio Line</p>
-              <h3>Leather Jackets, Made To Measure</h3>
-              <span class="btn btn-ghost-dark">Shop Leather Jackets</span>
+        <div class="best-grid winter-products">
+          <article class="product-card">
+            <div class="product-media">
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=700&auto=format&fit=crop&q=70" alt="Shearling Coat" />
             </div>
-          </a>
-          <a href="#" class="spotlight-card">
-            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=1200&auto=format&fit=crop&q=70" alt="Tan leather tote bag on a wooden surface" />
-            <div class="spot-content">
-              <p class="eyebrow light">TruCarry</p>
-              <h3>Leather Bags Built For The Long Haul</h3>
-              <span class="btn btn-ghost-dark">Shop Leather Bags</span>
+            <h3 class="product-name">Shearling Coat</h3>
+            <p class="product-price"><span class="price-current">$549</span></p>
+          </article>
+          <article class="product-card">
+            <div class="product-media">
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=700&auto=format&fit=crop&q=70" alt="Quilted Field jacket" />
             </div>
-          </a>
-          <a href="#" class="spotlight-card">
-            <img src="https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?w=1200&auto=format&fit=crop&q=70" alt="Pair of brown leather shoes on a concrete floor" />
-            <div class="spot-content">
-              <p class="eyebrow light">Eviternity</p>
-              <h3>Leather Shoes That Break In, Not Down</h3>
-              <span class="btn btn-ghost-dark">Shop Leather Shoes</span>
+            <h3 class="product-name">Quilted Field</h3>
+            <p class="product-price"><span class="price-current">$329</span></p>
+          </article>
+          <article class="product-card">
+            <div class="product-media">
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1549062572-544a64fb0c56?w=700&auto=format&fit=crop&q=70" alt="Heavy Overcoat" />
             </div>
-          </a>
+            <h3 class="product-name">Heavy Overcoat</h3>
+            <p class="product-price"><span class="price-current">$469</span></p>
+          </article>
+          <article class="product-card">
+            <div class="product-media">
+              <button class="wish-btn" aria-label="Add to wishlist">&#9825;</button>
+              <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=700&auto=format&fit=crop&q=70" alt="Storm Peacoat" />
+            </div>
+            <h3 class="product-name">Storm Peacoat</h3>
+            <p class="product-price"><span class="price-current">$389</span></p>
+          </article>
+        </div>
+        <div class="winter-cta">
+          <a href="#" class="btn btn-primary">Shop The Edit &rarr;</a>
         </div>
       </div>
     </section>
 
-    <!-- 6. Best Sellers carousel -->
-    <section class="section bestsellers reveal" id="bestsellers" aria-labelledby="bestTitle">
+    <!-- ============================================================
+         (11) CUSTOM-FIT CTA
+         ============================================================ -->
+    <section class="custom-cta reveal" id="custom" aria-labelledby="customTitle">
+      <div class="custom-grid">
+        <div class="custom-media">
+          <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=1200&auto=format&fit=crop&q=70" alt="Master artisan stitching a leather panel" />
+        </div>
+        <div class="custom-copy">
+          <p class="eyebrow">Made-To-Measure</p>
+          <h2 id="customTitle">Designed Just For You</h2>
+          <p>Custom made-to-measure jackets &mdash; your size, your leather, your style. Free worldwide shipping on every custom order.</p>
+          <ul class="custom-points">
+            <li>&#10003; Choose your leather type and color</li>
+            <li>&#10003; Pick your style, lining and hardware</li>
+            <li>&#10003; Send measurements or visit our atelier</li>
+            <li>&#10003; Hand-built and shipped in 4-6 weeks</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Start Your Custom Jacket &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         (12) CUSTOMER REVIEWS
+         ============================================================ -->
+    <section class="section reviews reveal" aria-labelledby="reviewsTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Real Stories</p>
+          <h2 id="reviewsTitle">What Our Customers Say</h2>
+          <p class="section-sub"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 / 5 &bull; 2,400+ verified reviews</p>
+        </header>
+
+        <div class="review-grid">
+          <figure class="review-card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=70" alt="Customer John D." class="review-avatar"/>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <blockquote>&ldquo;Best leather jacket I&#39;ve ever owned. The custom fit is unreal &mdash; feels like it was made for me. Will buy again.&rdquo;</blockquote>
+            <figcaption>
+              <strong>John D.</strong> &mdash; USA
+              <span class="verified">&#10003; Verified Buyer</span>
+            </figcaption>
+          </figure>
+
+          <figure class="review-card">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&auto=format&fit=crop&q=70" alt="Customer Sarah P." class="review-avatar"/>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <blockquote>&ldquo;Fits like a glove. The leather is buttery soft and the stitching is flawless. Worth every penny.&rdquo;</blockquote>
+            <figcaption>
+              <strong>Sarah P.</strong> &mdash; UK
+              <span class="verified">&#10003; Verified Buyer</span>
+            </figcaption>
+          </figure>
+
+          <figure class="review-card">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=300&auto=format&fit=crop&q=70" alt="Customer Ahmed K." class="review-avatar"/>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <blockquote>&ldquo;Quality is insane for the price. Compared to designer brands, this is in another league. Highly recommend.&rdquo;</blockquote>
+            <figcaption>
+              <strong>Ahmed K.</strong> &mdash; UAE
+              <span class="verified">&#10003; Verified Buyer</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="reviews-cta">
+          <a href="#" class="link-arrow">Read All Reviews &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         (13) PRESS / AS SEEN IN
+         ============================================================ -->
+    <section class="press reveal" aria-labelledby="pressTitle">
+      <div class="container">
+        <h2 id="pressTitle" class="press-heading">As Seen In</h2>
+        <ul class="press-logos">
+          <li>GQ</li>
+          <li>Esquire</li>
+          <li>Forbes</li>
+          <li>Vogue</li>
+          <li>Hypebeast</li>
+          <li>Highsnobiety</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         (14) INSTAGRAM / UGC FEED
+         ============================================================ -->
+    <section class="section instagram reveal" aria-labelledby="igTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Community</p>
+          <h2 id="igTitle">#WearTheJackerMaker</h2>
+          <p class="section-sub">Real customers, real style. Tap any photo to shop the look.</p>
+        </header>
+
+        <div class="ig-grid">
+          <a href="#" class="ig-tile"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&auto=format&fit=crop&q=70" alt="Customer wearing leather jacket"/><span class="ig-shop">&#128722;</span></a>
+          <a href="#" class="ig-tile"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=70" alt="Customer wearing leather jacket"/><span class="ig-shop">&#128722;</span></a>
+          <a href="#" class="ig-tile"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=70" alt="Customer wearing leather jacket"/><span class="ig-shop">&#128722;</span></a>
+          <a href="#" class="ig-tile"><img src="https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=400&auto=format&fit=crop&q=70" alt="Customer wearing leather jacket"/><span class="ig-shop">&#128722;</span></a>
+          <a href="#" class="ig-tile"><img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=400&auto=format&fit=crop&q=70" alt="Customer wearing leather jacket"/><span class="ig-shop">&#128722;</span></a>
+          <a href="#" class="ig-tile"><img src="https://images.unsplash.com/photo-1520975922284-9ea39113a2d5?w=400&auto=format&fit=crop&q=70" alt="Customer wearing leather jacket"/><span class="ig-shop">&#128722;</span></a>
+        </div>
+
+        <div class="ig-cta">
+          <a href="#" class="link-arrow">Follow Us On Instagram &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         (15) BLOG / JOURNAL
+         ============================================================ -->
+    <section class="section journal reveal" id="journal" aria-labelledby="journalTitle">
       <div class="container">
         <header class="section-head carousel-head">
           <div>
-            <p class="eyebrow">Customer Favourites</p>
-            <h2 id="bestTitle">Shop Best Sellers</h2>
-            <p class="section-sub">What our customers keep coming back for.</p>
+            <p class="eyebrow">Read</p>
+            <h2 id="journalTitle">From The Journal</h2>
           </div>
-          <div class="carousel-controls" aria-label="Carousel controls">
-            <button class="carousel-btn" id="prevBtn" aria-label="Previous items">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 6 9 12 15 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <button class="carousel-btn" id="nextBtn" aria-label="Next items">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
+          <a href="#" class="link-arrow">All Posts &rarr;</a>
         </header>
 
-        <div class="carousel" id="carousel">
-          <article class="product-card carousel-item">
-            <div class="product-media">
-              <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?w=700&auto=format&fit=crop&q=70" alt="Classic Moto jacket in black leather" />
-              <button class="add-btn" type="button">Add to Cart</button>
+        <div class="journal-grid">
+          <article class="journal-card">
+            <a href="#"><img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=900&auto=format&fit=crop&q=70" alt="Leather care guide"/></a>
+            <div class="journal-body">
+              <p class="journal-meta">Care Guide &bull; 5 min read</p>
+              <h3><a href="#">How To Care For Your Leather Jacket</a></h3>
+              <p>The simple weekly routine that keeps top-grain leather looking better with every year.</p>
             </div>
-            <h3 class="product-name">Classic Moto</h3>
-            <p class="product-price"><span class="price-current">$299</span></p>
           </article>
 
-          <article class="product-card carousel-item">
-            <div class="product-media">
-              <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=700&auto=format&fit=crop&q=70" alt="Aviator Shearling jacket in brown" />
-              <button class="add-btn" type="button">Add to Cart</button>
+          <article class="journal-card">
+            <a href="#"><img src="https://images.unsplash.com/photo-1591213954196-2d0ccb3f8d4c?w=900&auto=format&fit=crop&q=70" alt="Leather types explained"/></a>
+            <div class="journal-body">
+              <p class="journal-meta">Education &bull; 7 min read</p>
+              <h3><a href="#">Leather Types Explained &mdash; 2026 Guide</a></h3>
+              <p>Top-grain vs full-grain vs split: a no-nonsense breakdown to help you buy smart.</p>
             </div>
-            <h3 class="product-name">Aviator Shearling</h3>
-            <p class="product-price"><span class="price-current">$459</span></p>
           </article>
 
-          <article class="product-card carousel-item">
-            <div class="product-media">
-              <span class="product-badge">Sale</span>
-              <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=700&auto=format&fit=crop&q=70" alt="Urban Bomber jacket in olive" />
-              <button class="add-btn" type="button">Add to Cart</button>
+          <article class="journal-card">
+            <a href="#"><img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?w=900&auto=format&fit=crop&q=70" alt="Style guide: how to wear a biker"/></a>
+            <div class="journal-body">
+              <p class="journal-meta">Style &bull; 4 min read</p>
+              <h3><a href="#">Style Guide: How To Wear A Biker</a></h3>
+              <p>Five outfits that prove the biker jacket isn&#39;t just for the bike &mdash; or the rebellion.</p>
             </div>
-            <h3 class="product-name">Urban Bomber</h3>
-            <p class="product-price"><span class="price-current">$249</span><span class="price-was">$299</span></p>
-          </article>
-
-          <article class="product-card carousel-item">
-            <div class="product-media">
-              <img src="https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=700&auto=format&fit=crop&q=70" alt="Heritage Cafe Racer jacket in espresso brown" />
-              <button class="add-btn" type="button">Add to Cart</button>
-            </div>
-            <h3 class="product-name">Heritage Cafe Racer</h3>
-            <p class="product-price"><span class="price-current">$329</span></p>
-          </article>
-
-          <article class="product-card carousel-item">
-            <div class="product-media">
-              <img src="https://images.unsplash.com/photo-1548883354-94bcfe321cbb?w=700&auto=format&fit=crop&q=70" alt="Suede Trucker jacket in tan" />
-              <button class="add-btn" type="button">Add to Cart</button>
-            </div>
-            <h3 class="product-name">Suede Trucker</h3>
-            <p class="product-price"><span class="price-current">$279</span></p>
-          </article>
-
-          <article class="product-card carousel-item">
-            <div class="product-media">
-              <img src="https://images.unsplash.com/photo-1591213954196-2d0ccb3f8d4c?w=700&auto=format&fit=crop&q=70" alt="Cognac Racer jacket" />
-              <button class="add-btn" type="button">Add to Cart</button>
-            </div>
-            <h3 class="product-name">Cognac Racer</h3>
-            <p class="product-price"><span class="price-current">$349</span></p>
-          </article>
-
-          <article class="product-card carousel-item">
-            <div class="product-media">
-              <span class="product-badge">Sale</span>
-              <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=700&auto=format&fit=crop&q=70" alt="Quilted Field jacket" />
-              <button class="add-btn" type="button">Add to Cart</button>
-            </div>
-            <h3 class="product-name">Quilted Field</h3>
-            <p class="product-price"><span class="price-current">$219</span><span class="price-was">$269</span></p>
-          </article>
-
-          <article class="product-card carousel-item">
-            <div class="product-media">
-              <img src="https://images.unsplash.com/photo-1507680434567-5739c80be1ac?w=700&auto=format&fit=crop&q=70" alt="The Editor Trench coat in camel" />
-              <button class="add-btn" type="button">Add to Cart</button>
-            </div>
-            <h3 class="product-name">The Editor Trench</h3>
-            <p class="product-price"><span class="price-current">$389</span></p>
-          </article>
-
-          <article class="product-card carousel-item">
-            <div class="product-media">
-              <img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=700&auto=format&fit=crop&q=70" alt="Midnight Racer jacket" />
-              <button class="add-btn" type="button">Add to Cart</button>
-            </div>
-            <h3 class="product-name">Midnight Racer</h3>
-            <p class="product-price"><span class="price-current">$359</span></p>
-          </article>
-
-          <article class="product-card carousel-item">
-            <div class="product-media">
-              <img src="https://images.unsplash.com/photo-1549062572-544a64fb0c56?w=700&auto=format&fit=crop&q=70" alt="Savile Overcoat" />
-              <button class="add-btn" type="button">Add to Cart</button>
-            </div>
-            <h3 class="product-name">Savile Overcoat</h3>
-            <p class="product-price"><span class="price-current">$469</span></p>
-          </article>
-
-          <article class="product-card carousel-item">
-            <div class="product-media">
-              <img src="https://images.unsplash.com/photo-1520975922284-9ea39113a2d5?w=700&auto=format&fit=crop&q=70" alt="Ember Biker jacket" />
-              <button class="add-btn" type="button">Add to Cart</button>
-            </div>
-            <h3 class="product-name">Ember Biker</h3>
-            <p class="product-price"><span class="price-current">$319</span></p>
-          </article>
-
-          <article class="product-card carousel-item">
-            <div class="product-media">
-              <span class="product-badge">Sale</span>
-              <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=700&auto=format&fit=crop&q=70" alt="Harbor Peacoat" />
-              <button class="add-btn" type="button">Add to Cart</button>
-            </div>
-            <h3 class="product-name">Harbor Peacoat</h3>
-            <p class="product-price"><span class="price-current">$299</span><span class="price-was">$359</span></p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- 7. As Featured In -->
-    <section class="section press reveal" aria-labelledby="pressTitle">
+    <!-- ============================================================
+         (16) NEWSLETTER
+         ============================================================ -->
+    <section class="newsletter reveal" aria-labelledby="newsTitle">
       <div class="container">
-        <header class="section-head">
-          <h2 id="pressTitle" class="press-heading">As Featured In</h2>
-        </header>
-        <ul class="press-logos">
-          <li>The Atelier Review</li>
-          <li>Outline Quarterly</li>
-          <li>Broadcloth Journal</li>
-          <li>Field &amp; Fold</li>
-          <li>Hemline Weekly</li>
-          <li>The Cutaway</li>
-        </ul>
-        <p class="press-rating">
-          <span class="rating-num">4.9 / 5</span>
-          <span class="stars" aria-label="4.9 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span class="rating-text">from 12,000+ happy customers</span>
-        </p>
-      </div>
-    </section>
+        <p class="eyebrow">Insider Access</p>
+        <h2 id="newsTitle">Join The JackerMaker Insider</h2>
+        <p>Get 10% off your first order + early access to every new drop.</p>
 
-    <!-- 8. Clearance promo -->
-    <section class="promo-banner clearance reveal" aria-labelledby="clearTitle">
-      <div class="container">
-        <p class="eyebrow light">Final Markdown</p>
-        <h2 id="clearTitle">Clearance Sale - Up To 50% Off</h2>
-        <p>Last pieces from past collections. When they're gone, they're gone.</p>
-        <a href="#" class="btn btn-primary">Shop Clearance</a>
-      </div>
-    </section>
-
-    <!-- 9. Star Spotlight -->
-    <section class="section spotlight-stars reveal" aria-labelledby="starsTitle">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">Seen In The Wild</p>
-          <h2 id="starsTitle">Star Spotlight</h2>
-          <p class="section-sub">When the studio meets the spotlight.</p>
-        </header>
-
-        <div class="star-grid">
-          <figure class="star-card">
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=700&auto=format&fit=crop&q=70" alt="Portrait of Marcus K., style editor" />
-            <figcaption class="star-caption">Marcus K. / Style editor</figcaption>
-          </figure>
-          <figure class="star-card">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=700&auto=format&fit=crop&q=70" alt="Portrait of Aisha R., musician" />
-            <figcaption class="star-caption">Aisha R. / Musician</figcaption>
-          </figure>
-          <figure class="star-card">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=700&auto=format&fit=crop&q=70" alt="Portrait of Jon T., restaurateur" />
-            <figcaption class="star-caption">Jon T. / Restaurateur</figcaption>
-          </figure>
-          <figure class="star-card">
-            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=700&auto=format&fit=crop&q=70" alt="Portrait of Lena V., photographer" />
-            <figcaption class="star-caption">Lena V. / Photographer</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- 10. Secondary promo -->
-    <section class="promo-banner flat25 reveal" aria-labelledby="flatTitle">
-      <div class="container flat25-inner">
-        <div class="flat25-copy">
-          <p class="eyebrow light">Weekend Deal</p>
-          <h2 id="flatTitle">Flat 25% Off Leather Bags</h2>
-          <p>Everyday carry, weekenders, and totes. Code auto-applies at checkout.</p>
-          <a href="#" class="btn btn-ghost-dark">Shop Bags</a>
-        </div>
+        <form class="news-form" id="newsForm" novalidate>
+          <label for="newsEmail" class="sr-only">Email address</label>
+          <input type="email" id="newsEmail" name="email" placeholder="your@email.com" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="news-status" id="newsStatus" role="status" aria-live="polite">We respect your privacy. Unsubscribe anytime.</p>
       </div>
     </section>
 
   </main>
 
-  <!-- 11. Footer -->
+  <!-- ============================================================
+       (17) MEGA FOOTER
+       ============================================================ -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="foot-col foot-brand-col">
-        <h3 class="foot-brand">THE JACKET STUDIO</h3>
-        <p>Custom leather jackets, bags, and shoes. Made by hand, made for you.</p>
-        <form class="news-form" id="newsForm" novalidate>
-          <label for="newsEmail" class="sr-only">Email address</label>
-          <input type="email" id="newsEmail" name="email" placeholder="Your email address" required autocomplete="email" />
-          <button type="submit" class="btn btn-primary">Join</button>
-        </form>
-        <p class="news-status" id="newsStatus" role="status" aria-live="polite"></p>
-      </div>
-      <div class="foot-col">
-        <h4>Customer Care</h4>
-        <ul>
-          <li><a href="#">Size Guide</a></li>
-          <li><a href="#">Shipping and Delivery</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Care Guide</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h4>About</h4>
-        <ul>
-          <li><a href="#">Our Story</a></li>
-          <li><a href="#">Craftsmanship</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Careers</a></li>
-        </ul>
+        <h3 class="foot-brand">THEJACKERMAKER</h3>
+        <p>Handcrafted leather jackets. Custom-fitted to you. Made to last a lifetime.</p>
       </div>
       <div class="foot-col">
         <h4>Shop</h4>
         <ul>
           <li><a href="#">Men</a></li>
           <li><a href="#">Women</a></li>
-          <li><a href="#">Bags</a></li>
-          <li><a href="#">Shoes</a></li>
           <li><a href="#">Custom</a></li>
           <li><a href="#">Sale</a></li>
           <li><a href="#">Gift Cards</a></li>
         </ul>
       </div>
+      <div class="foot-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Sizing Guide</a></li>
+          <li><a href="#">Leather Care</a></li>
+          <li><a href="#">Warranty</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Atelier</a></li>
+          <li><a href="#">Craft</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul class="social" aria-label="Social media">
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> Instagram</a></li>
+          <li><a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h2a4 4 0 0 0 4 4v2a6 6 0 0 1-4-1.5V15a5 5 0 1 1-5-5v2.5a2.5 2.5 0 1 0 2.5 2.5V4z" fill="currentColor"/></svg> TikTok</a></li>
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h2V5h-2a3 3 0 0 0-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14V8.5c0-.28.22-.5.5-.5z" fill="currentColor"/></svg> Facebook</a></li>
+          <li><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 7v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Pinterest</a></li>
+          <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><polygon points="11 9 15 12 11 15" fill="currentColor"/></svg> YouTube</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="foot-social">
-      <ul class="social" aria-label="Social media">
-        <li><a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-        </a></li>
-        <li><a href="#" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h2V5h-2a3 3 0 0 0-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14V8.5c0-.28.22-.5.5-.5z" fill="currentColor"/></svg>
-        </a></li>
-        <li><a href="#" aria-label="Twitter">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 5.8c-.7.3-1.5.6-2.3.7a4 4 0 0 0 1.8-2.2 8 8 0 0 1-2.5 1A4 4 0 0 0 12 9a11.3 11.3 0 0 1-8.2-4.2 4 4 0 0 0 1.2 5.3c-.6 0-1.2-.2-1.8-.5v.1a4 4 0 0 0 3.2 3.9c-.6.2-1.2.2-1.8.1a4 4 0 0 0 3.7 2.8A8 8 0 0 1 2 18a11.3 11.3 0 0 0 6.1 1.8c7.3 0 11.3-6 11.3-11.3v-.5c.8-.5 1.5-1.2 2-2z" fill="currentColor"/></svg>
-        </a></li>
-        <li><a href="#" aria-label="Pinterest">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.3s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.6 2 1.6 2 2 0 3.5-2.1 3.5-5.1 0-2.7-1.9-4.5-4.7-4.5-3.2 0-5 2.4-5 4.8 0 1 .4 2 .8 2.6a.3.3 0 0 1 .1.3l-.3 1.1c0 .2-.2.2-.4.1-1.3-.6-2.1-2.5-2.1-4 0-3.2 2.4-6.2 6.8-6.2 3.6 0 6.3 2.6 6.3 6 0 3.5-2.2 6.4-5.3 6.4-1 0-2-.5-2.3-1.2l-.6 2.4c-.2.9-.9 2-1.3 2.7A10 10 0 1 0 12 2z" fill="currentColor"/></svg>
-        </a></li>
+    <div class="foot-pay">
+      <ul class="pay-methods" aria-label="Accepted payment methods">
+        <li>VISA</li>
+        <li>MASTERCARD</li>
+        <li>AMEX</li>
+        <li>PAYPAL</li>
+        <li>APPLE PAY</li>
+        <li>G PAY</li>
+        <li>KLARNA</li>
       </ul>
     </div>
 
     <div class="foot-bottom">
       <div class="container foot-bottom-inner">
-        <p>&copy; 2025 The Jacket Studio. All rights reserved.</p>
-        <ul class="pay-methods" aria-label="Accepted payment methods">
-          <li>VISA</li>
-          <li>MASTERCARD</li>
-          <li>AMEX</li>
-          <li>PAYPAL</li>
-          <li>APPLE PAY</li>
+        <p>&copy; 2026 THEJACKERMAKER. All rights reserved.</p>
+        <ul class="foot-legal">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li>&#127757; EN / USD</li>
         </ul>
       </div>
     </div>
   </footer>
+
+  <!-- ============================================================
+       (18) FLOATING WHATSAPP BUTTON
+       ============================================================ -->
+  <a href="https://wa.me/000000000" class="whatsapp-float" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+      <path fill="currentColor" d="M20 3.5A11 11 0 0 0 3.4 17.8L2 22l4.4-1.3A11 11 0 1 0 20 3.5zM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-2.6.7.7-2.5-.2-.3A8 8 0 1 1 12 20zm4.4-5.6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.7.9-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.7s1.9 2.9 4.6 4c1.6.7 2.3.8 3.1.7.5-.1 1.4-.6 1.6-1.1s.2-1 .2-1.1-.2-.2-.4-.3z"/>
+    </svg>
+    <span class="whatsapp-label">Chat</span>
+  </a>
 
   <script src="js/main.js" defer></script>
 </body>

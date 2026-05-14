@@ -1,5 +1,5 @@
 /* =========================================================
-   The Jacket Studio - Landing page interactions
+   THEJACKERMAKER - Homepage interactions
    ========================================================= */
 
 (function () {
@@ -12,6 +12,8 @@
     initCarousel();
     initReveal();
     initAnnouncement();
+    initWishlist();
+    initCart();
   });
 
   /* ---------------------------------------------------------
@@ -56,17 +58,14 @@
       if (expanded) close(); else open();
     });
 
-    // Close when any link inside the drawer is tapped
     drawer.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", close);
     });
 
-    // Close on escape
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") close();
     });
 
-    // Close when resizing up to desktop
     window.addEventListener("resize", function () {
       if (window.innerWidth > 768) close();
     });
@@ -80,6 +79,9 @@
     var status = document.getElementById("newsStatus");
     if (!form || !status) return;
 
+    var defaultMsg = status.textContent;
+    var defaultColor = status.style.color || "";
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var input = form.querySelector('input[type="email"]');
@@ -92,9 +94,15 @@
         return;
       }
 
-      status.textContent = "Thanks for subscribing! Check your inbox for a welcome note.";
-      status.style.color = "";
+      status.textContent = "Welcome to the Insider list! Your 10% off code is on its way.";
+      status.style.color = "#c69a6b";
       form.reset();
+
+      // Reset to default after 6s
+      setTimeout(function () {
+        status.textContent = defaultMsg;
+        status.style.color = defaultColor;
+      }, 6000);
     });
   }
 
@@ -121,6 +129,19 @@
     next.addEventListener("click", function () {
       carousel.scrollBy({ left: step(), behavior: "smooth" });
     });
+
+    // Disable buttons at edges
+    var updateButtons = function () {
+      var atStart = carousel.scrollLeft <= 4;
+      var atEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 4;
+      prev.style.opacity = atStart ? "0.4" : "1";
+      next.style.opacity = atEnd ? "0.4" : "1";
+      prev.style.pointerEvents = atStart ? "none" : "auto";
+      next.style.pointerEvents = atEnd ? "none" : "auto";
+    };
+    updateButtons();
+    carousel.addEventListener("scroll", updateButtons, { passive: true });
+    window.addEventListener("resize", updateButtons);
   }
 
   /* ---------------------------------------------------------
@@ -156,8 +177,6 @@
     var slides = wrap.querySelectorAll(".announcement-slide");
     if (!slides.length) return;
 
-    // Normalize state: first slide active, all slides unhidden
-    // (CSS .announcement-slide { display: none } + .is-active drives visibility once JS is running).
     slides.forEach(function (el, i) {
       el.removeAttribute("hidden");
       if (i === 0) {
@@ -195,5 +214,61 @@
     region.addEventListener("mouseleave", start);
 
     start();
+  }
+
+  /* ---------------------------------------------------------
+     Wishlist heart toggle (visual only)
+     --------------------------------------------------------- */
+  function initWishlist() {
+    var buttons = document.querySelectorAll(".wish-btn");
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var active = btn.getAttribute("data-active") === "true";
+        if (active) {
+          btn.setAttribute("data-active", "false");
+          btn.innerHTML = "&#9825;"; // empty heart
+          btn.style.background = "rgba(255,255,255,0.92)";
+          btn.style.color = "";
+        } else {
+          btn.setAttribute("data-active", "true");
+          btn.innerHTML = "&#9829;"; // filled heart
+          btn.style.background = "#8b5a2b";
+          btn.style.color = "#fff";
+        }
+      });
+    });
+  }
+
+  /* ---------------------------------------------------------
+     Cart count demo (Add to Cart / Quick View)
+     --------------------------------------------------------- */
+  function initCart() {
+    var counter = document.querySelector(".cart-count");
+    var addBtns = document.querySelectorAll(".add-btn");
+    if (!counter || !addBtns.length) return;
+
+    var count = parseInt(counter.textContent, 10) || 0;
+
+    addBtns.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        // Only increment for "Add to Cart" buttons (Best Sellers grid)
+        if (btn.textContent.trim().toLowerCase().indexOf("add") !== 0) return;
+        count += 1;
+        counter.textContent = String(count);
+        // Pulse animation
+        counter.animate(
+          [
+            { transform: "scale(1)" },
+            { transform: "scale(1.5)" },
+            { transform: "scale(1)" }
+          ],
+          { duration: 350, easing: "ease-out" }
+        );
+      });
+    });
   }
 })();
